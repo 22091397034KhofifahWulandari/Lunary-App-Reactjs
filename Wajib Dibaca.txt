@@ -1,0 +1,11 @@
+1. di terminal kalian. Masuk ke projectnya lalu ketik
+
+npm install
+
+lalu tekan enter di keyboard
+
+kemudian kembali ke terminal ketik
+
+npm run dev
+
+masuk ke browser ketik url localhost:5173 atau sesuai dengan yang ada di terminal

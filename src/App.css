@@ -1,0 +1,201 @@
+/* Container */
+#root {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Heading */
+h1 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Form */
+.diary-form {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.diary-form input,
+.diary-form textarea {
+  width: 100%;
+  padding: 0.75em 1em;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.diary-form input:focus,
+.diary-form textarea:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 8px #646cff88;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.diary-form button {
+  background-color: #646cff;
+  color: white;
+  padding: 0.6em 1.6em;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.diary-form button:hover {
+  background-color: #4a4fe1;
+}
+
+.cancel-btn {
+  background-color: #bbb;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #999;
+}
+
+.diary-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.diary-list li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left; /* rata kiri untuk semua teks */
+}
+
+.diary-list li .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* agar vertical center */
+}
+
+.diary-list li .header h3 {
+  margin: 0;
+  flex: 1; /* agar judul melebar */
+}
+
+.diary-list li .header small {
+  margin-left: 10px;
+  white-space: nowrap;
+  color: #666;
+}
+
+.diary-list li p,
+.diary-list li small.suasana-hati {
+  margin: 5px 0 0 0;
+}
+
+.diary-list li .buttons {
+  display: flex;
+  justify-content: center; /* tombol di tengah */
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.diary-list li .buttons button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* Single Diary Card */
+.card {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0.2rem 0;
+  line-height: 1.4;
+}
+
+.card-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.card-buttons button {
+  padding: 0.4em 1em;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-buttons button:hover {
+  opacity: 0.85;
+}
+
+.card-buttons button:first-child {
+  background-color: #646cff;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e04848;
+}
+
+/* No entries message */
+.no-entries {
+  color: #888;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #root {
+    padding: 0 1rem;
+  }
+  
+  .diary-form,
+  .diary-list {
+    max-width: 100%;
+  }
+}
